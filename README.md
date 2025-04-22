@@ -68,9 +68,31 @@ Analog Signals, Analog to Digital Conversion, I2C Serial Communication.
 ## Software Component
 
 1. Since the 16x2 LCD Display uses I2C serial communication, the LCD needs to be initialized correctly. **Addressing is very important, typically the default address is (0x27) for I2C, but can vary**
+
+```c
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup_interfaces() {
+    Serial.begin(9600);
+    lcd.init();
+    lcd.backlight();
+    lcd.print("CPU Temp Monitor");
+}```
+
 2. For the ADC, a function needs to take the read the analog temperature and convert it using some math to a Celsius reading **Remember LM35 outputs 10mV per degree Celsius**
 
+```c
+float read_temperature_celsius() {
+    int analog_value = analogRead(A0);
+    float voltage = (analog_value / 1023.0) * 5.0;
+    return voltage * 100.0; // LM35 outputs 10mV/°C
+}```
+
 Reference the code snippets for additional clarification!
+
+Check out the .ino file for more code examples!
 
 ## Takeaways
 

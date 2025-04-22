@@ -94,7 +94,10 @@ float read_temperature_celsius() {
 
 Reference the code snippets for additional clarification!
 
-Check out the .ino file for more code examples!
+Check out the .ino file for full code example!
+
+**Note: The .ino file was translated from the original C++ code language to standard C language**
+
 
 ## Takeaways
 

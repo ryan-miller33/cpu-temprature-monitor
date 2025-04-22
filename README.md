@@ -79,7 +79,7 @@ void setup_interfaces() {
     lcd.init();
     lcd.backlight();
     lcd.print("CPU Temp Monitor");
-}```
+}'''
 
 2. For the ADC, a function needs to take the read the analog temperature and convert it using some math to a Celsius reading **Remember LM35 outputs 10mV per degree Celsius**
 
@@ -88,7 +88,7 @@ float read_temperature_celsius() {
     int analog_value = analogRead(A0);
     float voltage = (analog_value / 1023.0) * 5.0;
     return voltage * 100.0; // LM35 outputs 10mV/°C
-}```
+}'''
 
 Reference the code snippets for additional clarification!
 

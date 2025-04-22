@@ -95,7 +95,6 @@ float read_temperature_celsius() {
 Reference the code snippets for additional clarification!
 
 Check out the .ino file for full code example [HERE](Src/cpu_temp_monitor.ino) !
- !
 
 **Note: The .ino file was translated from the original C++ code language to standard C language**
 
